@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import FetchRandomUser from "./components/FetchRandomUser";
+import FetchBeer from "./components/fetchBeer/FetchBeer";
 
 class App extends Component {
   state = {
@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <FetchRandomUser />
+        <FetchBeer />
       </div>
     );
   }
