@@ -10,17 +10,25 @@ export default class FetchBeer extends React.Component {
           }
         }
         
-        componentDidMount() {
+        handleClick = () => {
           fetch('https://api.punkapi.com/v2/beers')
-          .then(res => res.json())
-          .then(data => this.setState({ beers: data}))
-           
+          .then(res => {
+            if (!res.ok) {
+              throw new Error('There has been an error');
+            }
+            return res.json();
+          })
+          .then(data => {this.setState({ beers: data})
+                        console.log(this.state.beers);
+        })
+          .catch(e => console.log(e))
         }
         
         
         render(){
         return (
           <div>
+            <button onClick={this.handleClick}>Get All Beers</button>
            {this.state.beers.map((beer) => {
              return <div key={beer.id}>
                <h1 className="h1" >NAME : {beer.name}</h1>
