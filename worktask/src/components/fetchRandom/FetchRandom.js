@@ -25,22 +25,24 @@ export default class FetchRandom extends React.Component {
        render(){
          const beer = this.state.randomBeer[0]
        return (
+           <div className="container1">
          <>
-         <button onClick={this.handleClick}>Get Random Beer</button>
+         <button className="buttonfetch1" onClick={this.handleClick}>Get Random Beer</button>
          {beer &&
-         (<div key={beer.id}>
-              <h1 className="h1" >NAME : {beer.name}</h1>
-              <img src= {beer.image_url} alt=""/>
-              <h2>TAGLINE : {beer.tagline}</h2>
-              <p>FIRST BREWED : {beer.first_brewed}</p>
-              <p> DESCRIPTION : <br></br>{beer.description}</p>
-              <p> FOOD PAIRING : <br></br>{beer.food_pairing}</p>
-              <p> ALCOHOL BY VOLUME(%) : {beer.abv}</p>
-              <p> pH : {beer.ph}</p>
+         (<div className="containerafter" key={beer.id}>
+              <h1 className="nameall" >NAME : {beer.name}</h1>
+               <img className="imgdiv" src= {beer.image_url}/>
+               <h2 className="secondheader">TAGLINE : {beer.tagline}</h2>
+               <p className="text">FIRST BREWED : {beer.first_brewed}</p>
+               <p className="text1"> DESCRIPTION : <br></br>{beer.description}</p>
+               <p className="text1"> FOOD PAIRING : <br></br>{beer.food_pairing}</p>
+               <p className="text1"> ALCOHOL BY VOLUME(%) : {beer.abv}</p>
+               <p className="text1"> pH : {beer.ph}</p>
 
 
               </div>)}
               </>
+              </div>
        );
        }
      }

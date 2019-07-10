@@ -7,6 +7,7 @@ export default class FetchBeer extends React.Component {
           super(props);
           this.state = {
             beers: [],
+            on:false,
           }
         }
         
@@ -27,18 +28,18 @@ export default class FetchBeer extends React.Component {
         
         render(){
         return (
-          <div>
-            <button onClick={this.handleClick}>Get All Beers</button>
+          <div className="container1">
+            <button className="buttonfetch1" onClick={this.handleClick}>Get All Beers</button>
            {this.state.beers.map((beer) => {
-             return <div key={beer.id}>
-               <h1 className="h1" >NAME : {beer.name}</h1>
-               <img src= {beer.image_url}/>
-               <h2>TAGLINE : {beer.tagline}</h2>
-               <p>FIRST BREWED : {beer.first_brewed}</p>
-               <p> DESCRIPTION : <br></br>{beer.description}</p>
-               <p> FOOD PAIRING : <br></br>{beer.food_pairing}</p>
-               <p> ALCOHOL BY VOLUME(%) : {beer.abv}</p>
-               <p> pH : {beer.ph}</p>
+             return <div  className="containerafter" key={beer.id}>
+               <h1 className="nameall" >NAME : {beer.name}</h1>
+               <img className="imgdiv" src= {beer.image_url}/>
+               <h2 className="secondheader">TAGLINE : {beer.tagline}</h2>
+               <p className="text">FIRST BREWED : {beer.first_brewed}</p>
+               <p className="text1"> DESCRIPTION : <br></br>{beer.description}</p>
+               <p className="text1"> FOOD PAIRING : <br></br>{beer.food_pairing}</p>
+               <p className="text1"> ALCOHOL BY VOLUME(%) : {beer.abv}</p>
+               <p className="text1"> pH : {beer.ph}</p>
                
                
                </div>
