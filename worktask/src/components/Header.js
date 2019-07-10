@@ -4,7 +4,7 @@ import "./HeaderStyle.css";
 function Header () {
 return (
     <header className="headertop">
-        <h1>Beer Fetch App</h1>
+        <h1 className="mainheader">Beer<br></br> Fetch<br></br> App</h1>
 
 
     </header>

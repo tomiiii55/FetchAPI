@@ -1,3 +1,9 @@
 .headertop{
-    width:100px;
+    width:60px;
+}
+
+.mainheader{
+    text-align: left;
+    font-size: 40px;
+    
 }

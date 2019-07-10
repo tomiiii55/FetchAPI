@@ -6,16 +6,16 @@
 
 .container1 {
     width:400px;
-    margin-left:50px;
+    margin-left:40px;
     margin-right:50px;
-    border-radius: 5px;
+    border-radius: 3px;
     border: 2px solid red;
 }
 .containerafter {
         width:400px;
         margin-left:0px;
-        margin-right:50px;
-        border-radius: 5px;
+        margin-right:45px;
+        border-radius: 3px;
         border: 2px solid red;
 }
 
